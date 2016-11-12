@@ -1,1 +1,1 @@
-This is the repository for the first Rails App using the Udemy Ruby on Rails Developer Course.
+Very basic blogging platform that supports unique users.
