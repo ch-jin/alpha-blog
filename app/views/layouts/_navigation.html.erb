@@ -28,6 +28,7 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li> <%= link_to "All Categories", categories_path %> </li>
+            <li role="separator" class="divider"></li>
             <% Category.all.each do |category| %>
               <li><%= link_to "#{category.name}", category_path(category) %></li>
             <% end %>
@@ -52,9 +53,6 @@
             <ul class="dropdown-menu">
               <li><%= link_to "Edit your profile", edit_user_path(current_user) %></li>
               <li><%= link_to "View your profile", user_path(current_user) %></li>
-              <li><a href="#">Something else here</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">Separated link</a></li>
             </ul>
           </li>
         <% else %>
