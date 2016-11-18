@@ -6,12 +6,12 @@ module ApplicationHelper
         image_tag(gravatar_url, alt: user.username, class: 'img-circle')
     end
     
-    def title(*args)
+    def title(current_title="")
         base_title = "Alpha Blog"
-        if args[0]
-            content_for :title, args[0].to_s + " | " + base_title
-        else
+        if current_title.blank?
             content_for :title, base_title
+        else
+            content_for :title, current_title + " | " + base_title
         end
     end
 end
